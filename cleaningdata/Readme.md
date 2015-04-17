@@ -10,13 +10,16 @@ The former lists the names of all the 561 train and test data features, while th
 The script loads into vectors these two files, in order to use the names for making the data understandable at first glance.
 
 The script handles train and test data by:
+
 1. Loading them through `read.table` function.
 2. Merging datasets by rows
 3. Assigning the feature names to the data frame (df) column. This is done by assigning a value to `names(df)`.
 4. Extracting the features of interest, by selecting only the features whose names contain the strings "mean()" or "std()"
+
 The resulting data frame is composed by 66 column, i.e., 66 remaining features.
 
 The script handles train and test labels by:
+
 1. Loading and merging them analogously to the data
 2. Transforming labels from numerical to categorical, through the `factor` function.
 3. Assigning the activity names to the label column (col), by assigning a value to `levels(col)`. 
